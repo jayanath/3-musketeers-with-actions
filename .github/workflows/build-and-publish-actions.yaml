@@ -10,7 +10,7 @@ jobs:
       - name: "Setup - Checkout"
         uses: actions/checkout@v2.1.0
       - name: "Docker Build and Push"
-        working-directory: "/"
+        working-directory: "."
         run: make build
         env:
           DOCKER_HUB_PASSWORD: "${{ secrets.DOCKER_HUB_PASSWORD }}"
